@@ -1,4 +1,6 @@
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -7,13 +9,27 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TesteFrames {
 
-	@Test
-	public void deveInteragirComFramesEJanelas() {
+	private WebDriver driver;
+
+	@Before
+	public void inicializa() {
 
 		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("file:///C:/Users/micha/Downloads/campo_treinamento/componentes.html");
+
+	}
+
+	@After
+	public void finaliza() {
+
+		driver.quit();
+
+	}
+
+	@Test
+	public void deveInteragirComFramesEJanelas() {
 
 		driver.switchTo().frame("frame1");
 		driver.findElement(By.id("frameButton")).click();
@@ -29,17 +45,10 @@ public class TesteFrames {
 		//
 		driver.findElement(By.id("elementosForm:nome")).sendKeys(msg);
 
-		driver.quit();
-
 	}
 
 	@Test
 	public void deveInteragirComJanelas() {
-
-		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("file:///C:/Users/micha/Downloads/campo_treinamento/componentes.html");
 
 		driver.findElement(By.id("buttonPopUpEasy")).click();
 		driver.switchTo().window("Popup");
@@ -50,17 +59,11 @@ public class TesteFrames {
 		// o nome da janela ou sem nome que ele retorna a pagina que não tem titulo
 		driver.switchTo().window("");
 		driver.findElement(By.tagName("textarea")).sendKeys("E agora?");
-		driver.quit();
 
 	}
 
 	@Test
 	public void deveInteragirComJanelasSemTitulo() {
-
-		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("file:///C:/Users/micha/Downloads/campo_treinamento/componentes.html");
 
 		driver.findElement(By.id("buttonPopUpHard")).click();
 		// O windowHandler é um comando que tras as coleçoes de janelas que o sistema
@@ -80,8 +83,6 @@ public class TesteFrames {
 		driver.findElement(By.tagName("textarea")).sendKeys("Deu certo?");
 		driver.switchTo().window((String) (driver.getWindowHandles().toArray()[0]));
 		driver.findElement(By.tagName("textarea")).sendKeys("E agora?");
-
-		driver.quit();
 
 		// O TESTE FAZ EXATAMENTE O QUE O ACIMA FAZ, A UNICA DIFERENÇA É QUE ESTE NÃO
 		// TEM IDENTIFICADOR NA MENSAGEM POPUP//
