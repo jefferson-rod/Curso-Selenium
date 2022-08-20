@@ -15,7 +15,7 @@ Selenium 3.141.59
 
 🔎 Observações
 
-Antes da execução dos testes voce precisa ter baixado na sua máquina 2 aquivos do campo de treinamento "COMPONENTE E FRAME" que estão disponiveis na pasta do projeto (src/main/resource), após o download efetuado basta indicar o caminho do seu arquivo baixado via linha de código.
+Antes da execução dos testes voce precisa ter baixado na sua máquina 2 aquivos do campo de treinamento "COMPONENTE.HTML E FRAME.HTML" que estão disponiveis na pasta do projeto (src/main/resource), após o download efetuado basta indicar o caminho do seu arquivo baixado via linha de código.
 
 ⚙️ Passo a passo para execução do teste
 Para executar os testes você tem 2 possiveis formas, sendo elas:
