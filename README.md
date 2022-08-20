@@ -1,8 +1,10 @@
 # Curso-Selenium
-Curso de testes funcionais com selenium (Udemy- Wc aquino)
+
+Trata se do produto de treinamento do curso da instituição udemy ministrado pelo professor Wagner costa aquino que tem por finalidade ensinar a utilizaçao do Selenium Webdriver juntamente com a linguagem de programação java e as principais tecnicas de boas práticas. (Udemy- Wc aquino)
 
 
 🤖 Tecnologias utilizadas
+IDE - Eclipse IDE for Java Developers
 JAVA JDK 11
 JUnit 4.12
 Selenium 3.141.59
