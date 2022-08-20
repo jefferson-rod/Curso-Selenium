@@ -1,6 +1,6 @@
 # Curso-Selenium
 
-Trata se do produto de treinamento do curso da instituição udemy ministrado pelo professor Wagner costa aquino que tem por finalidade ensinar a utilizaçao do Selenium Webdriver juntamente com a linguagem de programação java e as principais tecnicas de boas práticas utilizadas no dia a dia de um profissional. (Udemy- Wc aquino)
+Trata se do produto de treinamento do curso da instituição udemy ministrado pelo professor Wagner costa aquino que tem por finalidade ensinar a utilizaçao do Selenium com a linguagem de programação java e tecnicas de boas práticas utilizadas no dia a dia de um profissional. (Udemy- Wc aquino)
 
 
 🤖 Tecnologias utilizadas
